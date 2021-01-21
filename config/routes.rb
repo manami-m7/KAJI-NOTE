@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'charts/index'
   get 'task_histories/new'
   get 'task_histories/create'

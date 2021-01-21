@@ -1,0 +1,2 @@
+class TaskHistory < ApplicationRecord
+end
