@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
   get 'homes/how' => 'homes#how',as: 'how'
+  get 'homes/home' => 'homes#home', as: 'home'
 
   get 'users/my_page' => 'users#show'
   resources :users, only: [:edit, :update]
