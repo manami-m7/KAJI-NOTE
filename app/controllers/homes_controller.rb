@@ -5,6 +5,7 @@ class HomesController < ApplicationController
   def how
   end
 
-  def home
+  def index
+    @tasks = Task.all
   end
 end

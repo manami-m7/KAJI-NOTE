@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
   get 'homes/how' => 'homes#how',as: 'how'
-  get 'homes/home' => 'homes#home', as: 'home'
+  get 'homes/index' => 'homes#index', as: 'home'
+
+  resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
 
   get 'users/my_page' => 'users#show'
   resources :users, only: [:edit, :update]
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :groups, only: [:new, :create]
 
-  resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
+
 
   get '/charts' => 'charts#index'
 
