@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'homes#top'
   get 'homes/how' => 'homes#how',as: 'how'
   get 'homes/index' => 'homes#index', as: 'home'
@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   resources :task_histories, only: [:new, :create, :index, :edit, :update, :destroy]
 
   resources :groups, only: [:new, :create]
-
-
 
   get '/charts' => 'charts#index'
 
