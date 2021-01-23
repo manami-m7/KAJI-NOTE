@@ -6,6 +6,6 @@ class HomesController < ApplicationController
   end
 
   def index
-    @tasks = Task.all
+   @tasks = Task.where(group_id: current_user.group.id)
   end
 end

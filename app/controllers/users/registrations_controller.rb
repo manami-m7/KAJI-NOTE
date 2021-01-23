@@ -18,7 +18,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     #@user.groups.build ユーザーに紐づくグループテーブルの作成型を用意
     #group_name グループテーブルのカラム
     #params[:group_name] application_controllerで許可したデータを渡す
-    @user.groups.build(group_name: params[:group_name])
+    @group = Group.new(group_name: params[:group_name])
+    @group.save
+    @user.group = @group
+    # binding.pry
     @user.save
   end
 

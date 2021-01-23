@@ -4,19 +4,14 @@ class TasksController < ApplicationController
   end
 
   def create
-    # current_user.groups[0].id
     @task = Task.new(task_params)
-    @task.grou_id = current_user.groups[0].id
+    @task.group_id = current_user.group.id
     @task.save
     redirect_to home_path
   end
 
   def index
-    #current_user.groups ログイン中のユーザーが所属するグループのグループテーブル
-    #mapメソッドで
-    @tasks = Task.where(group_id: current_user.groups[0].id)
-    # [Group1, Group2, Group3]
-    # [1, 2, 3]
+    @tasks = Task.where(group_id: current_user.group.id)
   end
 
 
