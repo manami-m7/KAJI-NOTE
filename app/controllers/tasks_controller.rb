@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def index
     #current_user.groups ログイン中のユーザーが所属するグループのグループテーブル
     #mapメソッドで
-    @tasks = Task.where(group_id: current_user.groups[0].id) map{|group| group.id})
+    @tasks = Task.where(group_id: current_user.groups[0].id)
     # [Group1, Group2, Group3]
     # [1, 2, 3]
   end
