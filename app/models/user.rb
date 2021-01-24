@@ -7,4 +7,6 @@ class User < ApplicationRecord
 
   has_many :task_histories, dependent: :destroy
   belongs_to :group
+  # accepts_nested_attributes_for
+  accepts_nested_attributes_for :group
 end

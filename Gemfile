@@ -73,6 +73,11 @@ gem 'kaminari','~> 1.2.1'
 gem 'chartkick'
 
 gem 'bootstrap', '~> 4.5'
+
 gem 'jquery-rails'
+
 gem 'font-awesome-sass', '~> 5.13'
+
 gem 'pry-rails'
+#削除時のダイアログ表示gem
+gem 'data-confirm-modal'

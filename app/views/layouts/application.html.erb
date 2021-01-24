@@ -10,8 +10,10 @@
   </head>
 
   <body>
+
     <!--ユーザーがsign_in時のヘッダー-->
     <% if user_signed_in? %>
+     <%= current_user.name %>
       <header class="user_header">
         <div class="header-content">
           <ul class="flex">

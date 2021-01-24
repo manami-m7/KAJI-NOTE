@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protected
   # sign_upの際にname,group_nameのデータ受け渡しを許可
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :group_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, group_attributes: [:group_name]])
   end
 end

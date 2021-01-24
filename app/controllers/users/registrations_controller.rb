@@ -7,23 +7,38 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+
+    #親クラスから機能を継承
+    # superにdo endをつけ、その間に紐付けるというコードを書くことで
+    # def new
+    # build_resource
+    # yield resource if block_given?
+    # respond_with resource
+    # end
+    # のyieldの部分にブロックを入れることができ、deviseの機能のsign_up&sign_inの際に
+    # 親の情報も紐付けて登録できる
+    def new
+    super do
+      resource.group ||= Group.new
+    end
+
+  end
 
   # POST /resource
-  def create
-    #親クラスから継承
-    super
-    #@user.groups.build ユーザーに紐づくグループテーブルの作成型を用意
-    #group_name グループテーブルのカラム
-    #params[:group_name] application_controllerで許可したデータを渡す
-    @group = Group.new(group_name: params[:group_name])
-    @group.save
-    @user.group = @group
-    # binding.pry
-    @user.save
-  end
+  # def create
+
+  #   super
+  #   #railsルール→＠なしはコントロール内でのみ使用を意味し、＠ありはviewでの使用を意味する
+  #   #newでgroupnameの弥型を作成し、グループへ保存
+  #   #@userにパスワードが渡っていなかったのでparamsで渡せるようにして保存
+  #   group = Group.new(group_name: params[:group_name])
+  #   group.save
+  #   @user.group_id = group.id
+  #   @user.password = params[:user][:password]
+  #   @user.password_confirmation = params[:user][:password_confirmation]
+  #   @user.save
+  #   sign_in @user
+  # end
 
   # GET /resource/edit
   # def edit

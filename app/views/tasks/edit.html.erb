@@ -1,2 +1,6 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<h1>タスク編集</h1>
+<%= form_with model: @task, local:true do |f| %>
+  <%= f.text_area :name %>
+  <%= f.submit '編集' %>
+<% end %>
+
