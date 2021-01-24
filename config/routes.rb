@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'users/my_page' => 'users#show'
   resources :users, only: [:edit, :update]
 
-  resources :task_histories, only: [:new, :create, :index, :edit, :update, :destroy]
+  get 'task_histories/start' => 'task_histories#start', as: 'start'
+  get 'task_histories/finish' => 'task_histories#finish', as: 'finish'
+  resources :task_histories, only: [:new, :index, :edit, :update, :destroy]
 
   resources :groups, only: [:new, :create]
 
