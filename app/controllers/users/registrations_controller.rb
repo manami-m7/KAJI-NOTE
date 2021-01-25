@@ -18,11 +18,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # のyieldの部分にブロックを入れることができ、deviseの機能のsign_up&sign_inの際に
     # 親の情報も紐付けて登録できる
     def new
-    super do
-      resource.group ||= Group.new
-    end
+      super do
+        resource.group ||= Group.new
+      end
 
-  end
+    end
 
   # POST /resource
   # def create
