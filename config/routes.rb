@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'homes#top'
   get 'homes/how' => 'homes#how',as: 'how'
+  get 'homes/index' => 'homes#index', as: 'home'
+
+  resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
 
   get 'users/my_page' => 'users#show'
   resources :users, only: [:edit, :update]
 
-  resources :task_histories, only: [:new, :create, :index, :edit, :update, :destroy]
+  get 'task_histories/start' => 'task_histories#start', as: 'start'
+  get 'task_histories/finish' => 'task_histories#finish', as: 'finish'
+  resources :task_histories, only: [:new, :index, :edit, :update, :destroy]
 
   resources :groups, only: [:new, :create]
-
-  resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
 
   get '/charts' => 'charts#index'
 

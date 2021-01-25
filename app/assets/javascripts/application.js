@@ -22,3 +22,6 @@
 // chartkickインストールにより追記
 //= require chartkick
 //= require Chart.bundle
+
+
+//= require data-confirm-modal

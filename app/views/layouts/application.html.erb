@@ -10,6 +10,42 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <!--ユーザーがsign_in時のヘッダー-->
+    <% if user_signed_in? %>
+     <%= current_user.name %>
+      <header class="user_header">
+        <div class="header-content">
+          <ul class="flex">
+            <li><%= link_to 'Top', root_path %></li>
+            <li><%= link_to 'How To', how_path %></li>
+            <li><%= link_to 'Home', home_path %></li>
+            <li><%= link_to 'グラフ', charts_path %></li>
+            <li><%= link_to 'タスク', tasks_path %></li>
+            <li><%= link_to '履歴', task_histories_path %></li>
+            <li><%= link_to 'マイページ ', users_my_page_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </div>
+      </header>
+    <!--ユーザーがsign_out時のヘッダー-->
+    <% else %>
+      <header>
+        <div class="header-content">
+          <ul class="flex">
+            <li><%= link_to 'Top', root_path %></li>
+            <li><%= link_to 'How To', how_path %></li>
+            <li><%= link_to 'ログイン', new_user_session_path %></li>
+            <li><%= link_to '新規登録',  new_user_registration_path %> </li>
+          </ul>
+        </div>
+      </header>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>Copyright © Kaji-note Inc. All Rights Reserved.</footer>
   </body>
 </html>

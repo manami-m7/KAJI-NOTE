@@ -1,8 +1,12 @@
 class TaskHistoriesController < ApplicationController
   def new
+    @task = Task.new
   end
 
-  def create
+  def start
+  end
+
+  def finish
   end
 
   def index

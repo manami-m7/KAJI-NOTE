@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
-  has_many :group_users, dependent: :destroy
   has_many :task_histories, dependent: :destroy
-  has_many :groups, through: :group_users
+  belongs_to :group
+  # accepts_nested_attributes_for
+  accepts_nested_attributes_for :group
 end
