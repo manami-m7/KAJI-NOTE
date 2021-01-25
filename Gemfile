@@ -81,3 +81,8 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'pry-rails'
 #削除時のダイアログ表示gem
 gem 'data-confirm-modal'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
