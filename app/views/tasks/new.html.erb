@@ -1,5 +1,5 @@
 <h2>タスク新規作成</h2>
 <%= form_with model: @task, local:true do |f| %>
-  <%= f.text_area :name, placeholder: "新しい家事を入力" %>
+  <%= f.text_area :task_name, placeholder: "新しい家事を入力" %>
   <%= f.submit '作成' %>
 <% end %>
