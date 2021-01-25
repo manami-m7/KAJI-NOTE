@@ -1,5 +1,5 @@
 <h2>homeの家事タスク一覧</h2>
 <%= link_to '家事新規追加', new_task_path %>
 <% @tasks.each do |task| %>
-  <div><%= task.name %></div>
+  <div><%= task.task_name %></div>
 <% end %>
