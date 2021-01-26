@@ -4,6 +4,8 @@ class TaskHistoriesController < ApplicationController
   end
 
   def start
+    @task_history = Task_history.new
+
   end
 
   def finish

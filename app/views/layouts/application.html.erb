@@ -23,7 +23,7 @@
             <li><%= link_to 'グラフ', charts_path %></li>
             <li><%= link_to 'タスク', tasks_path %></li>
             <li><%= link_to '履歴', task_histories_path %></li>
-            <li><%= link_to 'マイページ ', users_my_page_path %></li>
+            <li><%= link_to '設定', edit_user_path(current_user) %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
