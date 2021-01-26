@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
 
-  get 'users/my_page' => 'users#show'
   resources :users, only: [:edit, :update]
 
   get 'task_histories/start' => 'task_histories#start', as: 'start'
