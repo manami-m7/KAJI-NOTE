@@ -1,2 +1,12 @@
-<h1>TaskHistories#index</h1>
-<p>Find me in app/views/task_histories/index.html.erb</p>
+<h1>履歴</h1>
+<table class="table">
+  <tbody>
+    <% @task_histories.each do |task_history| %>
+      <tr>
+        <td><%= task_history.user.name %></td>
+        <td><%= task_history.task_name %></td>
+        <td><%= task_history.start_time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

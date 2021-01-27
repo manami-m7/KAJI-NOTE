@@ -17,6 +17,7 @@ class TaskHistoriesController < ApplicationController
   end
 
   def index
+    @task_histories = TaskHistory.where(user_id: current_user.id)
   end
 
   def edit
