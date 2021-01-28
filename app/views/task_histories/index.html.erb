@@ -4,8 +4,9 @@
     <% @task_histories.each do |task_history| %>
       <tr>
         <td><%= task_history.user.name %></td>
-        <td><%= task_history.task_name %></td>
+        <td><%= task_history.task.task_name %></td>
         <td><%= task_history.start_time %></td>
+        <td><%= task_history.finish_time %></td>
       </tr>
     <% end %>
   </tbody>

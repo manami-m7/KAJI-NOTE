@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_27_011903) do
+ActiveRecord::Schema.define(version: 2021_01_28_030239) do
 
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_01_27_011903) do
   end
 
   create_table "task_histories", force: :cascade do |t|
-    t.time "start_time"
-    t.time "finish_time"
+    t.datetime "start_time"
+    t.datetime "finish_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "task_id"

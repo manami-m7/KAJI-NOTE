@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
 
   post 'task_histories/start' => 'task_histories#start', as: 'start'
-  post 'task_histories/finish' => 'task_histories#finish', as: 'finish'
+  patch 'task_histories/finish' => 'task_histories#finish', as: 'finish'
   resources :task_histories, only: [:new, :index, :edit, :update, :destroy]
 
   resources :groups, only: [:new, :create]
