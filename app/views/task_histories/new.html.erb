@@ -2,13 +2,19 @@
 
 <%= form_tag("start", method: :post, id: @task_id) do %>
   <%= hidden_field_tag :task_id, @task_id %>
-  <input type="submit" value="Time Start">
+  <% if @task_history.present? %>
+    <input type="submit" value="Time Start" disabled>
+  <% else %>
+    <input type="submit" value="Time Start">
+  <% end %>
 <% end %>
 
 <%= form_tag("finish", method: :patch, action: :finish, id: @task_history_id) do %>
-  <%= hidden_field_tag :task_history_id, @task_history_id %>
-  <input type="submit" value="Time End">
+  <% if @task_history.nil? %>
+    <input type="submit" value="Time End" disabled>
+  <% else %>
+    <%= hidden_field_tag :task_history_id, @task_history.id %>
+    <input type="submit" value="Time End">
+  <% end %>
 <% end %>
 
-<!--条件分岐で打刻開始前はスタートボタンのみ表示
-スタートボタンで打刻が開始されればストップボタンのみ表示に変更する-->
