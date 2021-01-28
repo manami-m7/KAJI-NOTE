@@ -5,7 +5,7 @@
   <input type="submit" value="Time Start">
 <% end %>
 
-<%= form_tag("finish", id: @task_history_id) do %>
+<%= form_tag("finish", method: :patch, action: :finish, id: @task_history_id) do %>
   <%= hidden_field_tag :task_history_id, @task_history_id %>
   <input type="submit" value="Time End">
 <% end %>
