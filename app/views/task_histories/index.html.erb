@@ -5,6 +5,7 @@
     <th>task</th>
     <th>start time</th>
     <th>finish time</th>
+    <th>勤務時間（分）</th>
   </tr>
   <tbody>
     <% @task_histories.each do |task_history| %>
@@ -13,7 +14,7 @@
         <td><%= task_history.task.task_name %></td>
         <td><%= simple_time(task_history.start_time) %></td>
         <td><%= simple_time(task_history.finish_time) %></td>
-        <td><%= task_history.finish_time - task_history.start_time %></td>
+        <td><%= task_history.time_diff %></td>
       </tr>
     <% end %>
   </tbody>
