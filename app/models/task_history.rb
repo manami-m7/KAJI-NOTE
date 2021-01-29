@@ -2,8 +2,10 @@ class TaskHistory < ApplicationRecord
   belongs_to :task
   belongs_to :user
 
-  # def time_diff
-  #   @time_diff = task_history.finish_time - task_history.start_time
-  # end
+
+# 小数点以下は切り上げ表示
+  def time_diff
+    return ((self.finish_time - self.start_time) / 60).ceil
+  end
 
 end
