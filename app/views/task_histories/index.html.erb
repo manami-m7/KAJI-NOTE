@@ -11,8 +11,8 @@
       <tr>
         <td><%= task_history.user.name %></td>
         <td><%= task_history.task.task_name %></td>
-        <td><%= task_history.start_time %></td>
-        <td><%= task_history.finish_time %></td>
+        <td><%= simple_time(task_history.start_time) %></td>
+        <td><%= simple_time(task_history.finish_time) %></td>
       </tr>
     <% end %>
   </tbody>
