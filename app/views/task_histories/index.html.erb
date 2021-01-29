@@ -13,6 +13,7 @@
         <td><%= task_history.task.task_name %></td>
         <td><%= simple_time(task_history.start_time) %></td>
         <td><%= simple_time(task_history.finish_time) %></td>
+        <td><%= task_history.finish_time - task_history.start_time %></td>
       </tr>
     <% end %>
   </tbody>
