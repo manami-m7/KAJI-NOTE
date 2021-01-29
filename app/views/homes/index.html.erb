@@ -2,8 +2,8 @@
 <%= link_to '家事新規追加', new_task_path %>
 <% @tasks.each do |task| %>
   <div>
-    <%= link_to new_task_history_path do %>
+    <%= link_to new_task_history_path(:task_id => task.id) do %>
     <%= task.task_name %>
     <% end %>
-    </div>
+  </div>
 <% end %>
