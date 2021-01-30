@@ -6,7 +6,6 @@ require "date"
   def new
     @task_id = params[:task_id]
     @task_history = current_user.task_histories.find_by(finish_time: nil)
-    # @task_history_id = TaskHistory.where(finish_time: nil, user_id: current_user.id)
     render :new
   end
 
@@ -31,13 +30,25 @@ require "date"
   end
 
   def edit
+    @task_history = TaskHistory.find(params[:id])
   end
 
   def update
-
+    @task_history = TaskHistory.find(params[:id])
+    @task_history.update(task_history_params)
+    redirect_to task_histories_path
   end
 
   def destroy
+    @task_history = TaskHistory.find(params[:id])
+    @task_history.destroy
+    redirect_to task_histories_path
+  end
+
+  private
+
+  def task_history_params
+    params.require(:task_history).permit(:start_time, :finish_time)
   end
 
 end

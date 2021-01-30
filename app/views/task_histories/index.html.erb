@@ -1,20 +1,27 @@
 <h1>履歴</h1>
 <table class="table">
   <tr>
-    <th>name</th>
+    <th>day</th>
     <th>task</th>
     <th>start time</th>
     <th>finish time</th>
-    <th>勤務時間（分）</th>
+    <th>経過時間（分）</th>
   </tr>
   <tbody>
     <% @task_histories.each do |task_history| %>
       <tr>
-        <td><%= task_history.user.name %></td>
+        <td><%= simple_day(task_history.start_time) %></td>
         <td><%= task_history.task.task_name %></td>
         <td><%= simple_time(task_history.start_time) %></td>
         <td><%= simple_time(task_history.finish_time) %></td>
         <td><%= task_history.time_diff %></td>
+        <td><%= link_to "編集", edit_task_history_path(task_history) %></td>
+        <td>
+            <%= link_to "削除", task_history_path(task_history), method: :delete, data:
+            { confirm: '本当に削除して良いですか?',
+              cancel: 'やめる',
+              commit: '削除する'}, title: '削除確認' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
