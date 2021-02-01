@@ -147,3 +147,55 @@
 // .main-content h2 {
 //   height: 300px;
 // }
+
+.footer-content{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    border-top: 1.5px solid rgba(219,222,255,.6);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: auto 50px;
+}
+
+.fa-clipboard-list{
+  color: #6ed4d6ff;
+}
+
+.fa-plus{
+  color: #6ed4d6ff;
+}
+
+.fa-history{
+  color: #6ed4d6ff;
+}
+
+.fa-chart-pie{
+  color: #6ed4d6ff;
+}
+.fa-home{
+  color: #6ed4d6ff;
+}
+
+.fa-user-cog{
+  color: #6ed4d6ff;
+}
+
+.fa-sign-out-alt{
+  color: #6ed4d6ff;
+}
+
+.fa-sign-in-alt{
+  color: #6ed4d6ff;
+}
+
+.fa-user-plus{
+  color: #6ed4d6ff;
+}

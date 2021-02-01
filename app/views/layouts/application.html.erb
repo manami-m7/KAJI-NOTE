@@ -12,18 +12,17 @@
   <body>
      <!--ユーザーがsign_in時のヘッダー-->
       <% if user_signed_in? %>
-      <%= current_user.name %>
         <header>
           <div class="menu-drawer">
             <input type="checkbox" id="chk" />
             <label class="btn" for="chk"></label>
             <label class="other" for="chk"></label>
             <div class="content">
-              <h2><i class="fas fa-list-ul"></i>メニュー</h2>
+              <h2><%= current_user.name %></h2>
                 <div class="menu">
                   <%= link_to home_path do %><i class="fas fa-home"></i>home<% end %>
                   <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
-                  <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end%>
+                  <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end %>
                   <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
                   <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>setting<% end %>
                   <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
@@ -56,7 +55,22 @@
       <%= yield %>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-icon">
+          <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x"></i><% end %>
+        </div>
+        <div class="footer-icon">
+          <%= link_to home_path do %><i class="fas fa-plus fa-3x"></i><% end %>
+        </div>
+        <div class="footer-icon">
+          <%= link_to task_histories_path do %><i class="fas fa-history fa-3x"></i><% end %>
+        </div>
+        <div class="footer-icon">
+          <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x"></i><% end %>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
