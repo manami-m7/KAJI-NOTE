@@ -26,7 +26,7 @@ require "date"
   end
 
   def index
-    @task_histories = TaskHistory.where(user_id: current_user.id)
+    @task_histories = TaskHistory.where(user_id: current_user.id).where("created_at >= ?", Date.today)
   end
 
   def edit

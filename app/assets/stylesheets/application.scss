@@ -16,3 +16,134 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+.menu-drawer .btn {
+  font-size: 27px;
+  background: #fff;
+  width: 40px;
+  padding: 4px 0;
+  cursor: pointer;
+  text-align: center;
+  top: 0;
+  right: 0;
+}
+.menu-drawer .btn::before, .menu-drawer .btn::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.menu-drawer .btn::before {
+  content: "\f0c9";
+}
+.menu-drawer .btn::after {
+  content: "\f00d";
+}
+.menu-drawer .other {
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.menu-drawer .content {
+  display: table;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background: #fff;
+  width: 90vw;
+  top: 34px;
+  right: 0;
+  text-align: center;
+}
+@media screen and (min-width: 415px) {
+  .menu-drawer .content {
+    width: 350px;
+  }
+}
+.menu-drawer .content h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: #383838;
+  margin: 0;
+  padding: .7em;
+  border-radius: 4px 4px 0 0;
+}
+.menu-drawer .content h2 i {
+  color: #383838;
+  background: #fff;
+  border-radius: 50%;
+  padding: .4em;
+  margin-right: .5em;
+}
+.menu-drawer .content .menu {
+  height: 210px;
+  overflow-y: auto;
+}
+.menu-drawer .content a {
+  border-bottom: 1px solid #ebebeb;
+  padding: 1rem 0 0 0;
+  text-decoration: none;
+  color: #858585;
+  display: block;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.menu-drawer .content a i {
+  font-size: 27px;
+}
+.menu-drawer .content p {
+  color: #858585;
+}
+
+.menu-drawer .btn,
+.menu-drawer .content,
+.menu-drawer .other {
+  position: fixed;
+}
+.menu-drawer .btn,
+.menu-drawer .content {
+  z-index: 1001;
+}
+.menu-drawer .other {
+  z-index: 1000;
+}
+
+.menu-drawer #chk {
+  display: none;
+}
+.menu-drawer #chk ~ .btn::before {
+  display: block;
+}
+.menu-drawer #chk ~ .btn::after {
+  display: none;
+}
+.menu-drawer #chk ~ .other {
+  display: none;
+}
+.menu-drawer #chk:checked ~ .btn::before {
+  display: none;
+}
+.menu-drawer #chk:checked ~ .btn::after {
+  display: block;
+}
+.menu-drawer #chk:checked ~ .other {
+  display: block;
+}
+
+.menu-drawer #chk ~ .content {
+  transform: translate(350%, 0);
+  transition: transform 0.3s ease-in-out;
+}
+.menu-drawer #chk:checked ~ .content {
+  transform: none;
+}
+// .main-content {
+//   height: 10000px;
+//   background: #cfefff;
+//   color: #383838;
+//   text-align: center;
+// }
+// .main-content h2 {
+//   height: 300px;
+// }
