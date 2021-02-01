@@ -11,86 +11,52 @@
 
   <body>
      <!--ユーザーがsign_in時のヘッダー-->
-    <% if user_signed_in? %>
-     <%= current_user.name %>
-    <header>
-    <div class="menu-drawer">
-      <input type="checkbox" id="chk" />
-      <label class="btn" for="chk"></label>
-      <label class="other" for="chk"></label>
-      <div class="content">
-        <h2><i class="fas fa-list-ul"></i>メニュー</h2>
-        <div class="menu">
-          <%= link_to home_path do %><i class="fas fa-home"></i>home<% end %>
-          <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
-          <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end%>
-          <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
-          <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>setting<% end %>
-          <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
-        </div>
-        <p><i class="fas fa-chevron-down"></i></p>
-      </div>
-    </div>
-  </header>
+      <% if user_signed_in? %>
+      <%= current_user.name %>
+        <header>
+          <div class="menu-drawer">
+            <input type="checkbox" id="chk" />
+            <label class="btn" for="chk"></label>
+            <label class="other" for="chk"></label>
+            <div class="content">
+              <h2><i class="fas fa-list-ul"></i>メニュー</h2>
+                <div class="menu">
+                  <%= link_to home_path do %><i class="fas fa-home"></i>home<% end %>
+                  <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
+                  <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end%>
+                  <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
+                  <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>setting<% end %>
+                  <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
+                </div>
+                <p><i class="fas fa-chevron-down"></i></p>
+            </div>
+          </div>
+        </header>
 
-  <!--ユーザーがsign_out時のヘッダー-->
+    <!--ユーザーがsign_out時のヘッダー-->
     <% else %>
-  <header>
-    <div class="menu-drawer">
-      <input type="checkbox" id="chk" />
-      <label class="btn" for="chk"></label>
-      <label class="other" for="chk"></label>
-      <div class="content">
-        <h2><i class="fas fa-list-ul"></i>メニュー</h2>
-        <div class="menu">
-          <%= link_to new_user_session_path do %><i class="fas fa-sign-in-alt"></i></i>sign in<% end %>
-          <%= link_to new_user_registration_path do %><i class="fas fa-user-plus"></i>sign up<% end %>
-        <p>© 20xx sample.com</p>
-      </div>
-    </div>
-  </header>
-<% end %>
+        <header>
+          <div class="menu-drawer">
+            <input type="checkbox" id="chk" />
+            <label class="btn" for="chk"></label>
+            <label class="other" for="chk"></label>
+            <div class="content">
+              <h2><i class="fas fa-list-ul"></i>メニュー</h2>
+                <div class="menu">
+                  <%= link_to new_user_session_path do %><i class="fas fa-sign-in-alt"></i></i>sign in<% end %>
+                  <%= link_to new_user_registration_path do %><i class="fas fa-user-plus"></i>sign up<% end %>
+                  <p></p>
+                </div>
+            </div>
+          </div>
+        </header>
+    <% end %>
 
-<main>
+    <main>
       <%= yield %>
     </main>
 
     <footer></footer>
+
   </body>
 </html>
-    <!--ユーザーがsign_in時のヘッダー-->
-<!--    <% if user_signed_in? %>-->
-<!--     <%= current_user.name %>-->
-<!--      <header class="user_header">-->
-<!--        <div class="header-content">-->
-<!--          <ul class="flex">-->
-<!--            <li><%= link_to 'Top', root_path %></li>-->
-<!--            <li><%= link_to 'Home', home_path %></li>-->
-<!--            <li><%= link_to 'グラフ', charts_path %></li>-->
-<!--            <li><%= link_to 'タスク', tasks_path %></li>-->
-<!--            <li><%= link_to '履歴', task_histories_path %></li>-->
-<!--            <li><%= link_to '設定', edit_user_path(current_user) %></li>-->
-<!--            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      </header>-->
-    <!--ユーザーがsign_out時のヘッダー-->
-<!--    <% else %>-->
-<!--      <header>-->
-<!--        <div class="header-content">-->
-<!--          <ul class="flex">-->
-<!--            <li><%= link_to 'Top', root_path %></li>-->
-<!--            <li><%= link_to 'ログイン', new_user_session_path %></li>-->
-<!--            <li><%= link_to '新規登録',  new_user_registration_path %> </li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      </header>-->
-<!--    <% end %>-->
-
-<!--    <main>-->
-<!--      <%= yield %>-->
-<!--    </main>-->
-
-<!--    <footer></footer>-->
-<!--  </body>-->
-<!--</html>-->
