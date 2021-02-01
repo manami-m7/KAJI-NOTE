@@ -25,3 +25,4 @@
 
 
 //= require data-confirm-modal
+

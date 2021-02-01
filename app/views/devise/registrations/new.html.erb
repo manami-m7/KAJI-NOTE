@@ -29,16 +29,16 @@
   </div>
 
   <!--#f.fields_for-->
-  <div class="field">
-    <%= f.label :group_name %><br />
-     <%= f.fields_for :group do |group_form| %>
-    <%= group_form.text_field :group_name %>
-    <% end %>
-  </div>
+  <!--<div class="field">-->
+  <!--  <%#= f.label :group_name %><br />-->
+  <!--   <%#= f.fields_for :group do |group_form| %>-->
+  <!--  <%#= group_form.text_field :group_name %>-->
+  <!--  <%# end %>-->
+  <!--</div>-->
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
