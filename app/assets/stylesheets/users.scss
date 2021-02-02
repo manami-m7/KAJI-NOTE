@@ -1,3 +1,61 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.actions{
+  margin: 5em 0 0;
+  width: 100%;
+}
+
+.actions input[type="submit"] {
+  background: #F3AF7F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.form-group input[type="email"]{
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-group input[type="name"]{
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.user-form-wrapper{
+  margin: 5em auto;
+  width: 100%;
+}
+
+.user-box{
+  width: 500px;
+  margin: 30px auto;
+}
+
+.email-box{
+  margin-top: 70px;
+}
+
+

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<%= stylesheet_link_tag 'application' %>
+
 <html>
   <head>
     <title>KajiNote</title>
@@ -9,7 +12,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="body">
      <!--ユーザーがsign_in時のヘッダー-->
       <% if user_signed_in? %>
         <header>
@@ -24,7 +27,7 @@
                   <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
                   <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end %>
                   <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
-                  <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>setting<% end %>
+                  <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>about me<% end %>
                   <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
                 </div>
                 <p><i class="fas fa-chevron-down"></i></p>
@@ -51,26 +54,28 @@
         </header>
     <% end %>
 
-    <main>
-      <%= yield %>
-    </main>
+      <main>
+        <%= yield %>
+      </main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-icon">
-          <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x"></i><% end %>
+    <!--ユーザーがsign_in時のフッター-->
+    <% if user_signed_in? %>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-icon">
+            <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x"></i><% end %>
+          </div>
+          <div class="footer-icon">
+            <%= link_to home_path do %><i class="fas fa-plus fa-3x"></i><% end %>
+          </div>
+          <div class="footer-icon">
+            <%= link_to task_histories_path do %><i class="fas fa-history fa-3x"></i><% end %>
+          </div>
+          <div class="footer-icon">
+            <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x"></i><% end %>
+          </div>
         </div>
-        <div class="footer-icon">
-          <%= link_to home_path do %><i class="fas fa-plus fa-3x"></i><% end %>
-        </div>
-        <div class="footer-icon">
-          <%= link_to task_histories_path do %><i class="fas fa-history fa-3x"></i><% end %>
-        </div>
-        <div class="footer-icon">
-          <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x"></i><% end %>
-        </div>
-      </div>
-    </footer>
-
+       </footer>
+    <% end %>
   </body>
 </html>

@@ -13,10 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: #5e5e5e;
+  font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+}
+
+// ドロワーメニューデザイン
 .menu-drawer .btn {
   font-size: 27px;
   background: #fff;
@@ -83,7 +96,7 @@
   border-bottom: 1px solid #ebebeb;
   padding: 1rem 0 0 0;
   text-decoration: none;
-  color: #858585;
+  color: #8c8c8c;
   display: block;
   width: 100%;
   display: flex;
@@ -95,7 +108,6 @@
 .menu-drawer .content p {
   color: #858585;
 }
-
 .menu-drawer .btn,
 .menu-drawer .content,
 .menu-drawer .other {
@@ -130,7 +142,6 @@
 .menu-drawer #chk:checked ~ .other {
   display: block;
 }
-
 .menu-drawer #chk ~ .content {
   transform: translate(350%, 0);
   transition: transform 0.3s ease-in-out;
@@ -138,16 +149,8 @@
 .menu-drawer #chk:checked ~ .content {
   transform: none;
 }
-// .main-content {
-//   height: 10000px;
-//   background: #cfefff;
-//   color: #383838;
-//   text-align: center;
-// }
-// .main-content h2 {
-//   height: 300px;
-// }
 
+// footerデザイン
 .footer-content{
     position: fixed;
     bottom: 0;
@@ -156,46 +159,49 @@
     border-top: 1.5px solid rgba(219,222,255,.6);
     display: flex;
     justify-content: center;
+    background:#C7F2E1;
 }
-
 .footer-icon{
     display:flex;
     align-items:center;
     justify-content:center;
     margin: auto 50px;
 }
+.footer-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8c8c8c;
+  font-size: 26px
+}
 
+// アイコンカラー
 .fa-clipboard-list{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-plus{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-history{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-chart-pie{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
 .fa-home{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-user-cog{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-sign-out-alt{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
 }
-
 .fa-sign-in-alt{
-  color: #6ed4d6ff;
+  color: #8c8c8c;
+}
+.fa-user-plus{
+  color: #8c8c8c;
 }
 
-.fa-user-plus{
-  color: #6ed4d6ff;
-}
+

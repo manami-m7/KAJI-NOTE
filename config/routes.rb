@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'homes#top'
-  get 'homes/how' => 'homes#how',as: 'how'
   get 'homes/index' => 'homes#index', as: 'home'
 
   resources :tasks, only: [:new, :create, :index, :edit, :update, :destroy]
