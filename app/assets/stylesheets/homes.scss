@@ -12,10 +12,11 @@ body{
 }
 .home-box{
   overflow-y: scroll;
-  height: 400px;
+  height: 70vh;
+  background: #f5fffc;
 }
 .home-item{
-  background: #F3AF7F;
+  background: #C7F2E1;
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
@@ -28,6 +29,9 @@ body{
 }
 .home-icon{
     margin: 0 auto 20px;
+}
+.fa-plus{
+  color: #F3AF7F;
 }
 h1{
   text-align: center;

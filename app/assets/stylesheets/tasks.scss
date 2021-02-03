@@ -2,28 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1{
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: 35px;
+}
+body{
+  background: white;
+}
 // indexページ
 .task-container{
-  background: white;
+  background: #f5fffc;
   display:flex;
   flex-flow: column;
 }
 .task-box{
   overflow-y: scroll;
-  height: 500px;
+  height: 70vh;
 }
 .task-item{
-  background: #F3AF7F;
+  background: #C7F2E1;
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
   padding:1em;
   margin: 10px;
-}
-h1{
-  text-align: center;
-  padding: 1em 0;
-}
-body{
-  background: white;
 }

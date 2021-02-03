@@ -43,10 +43,17 @@ input[type="text"]{
   transition: border-color 0.3s;
   width: 100%;
 }
-
+input[type="email"]:focus {
+    outline: none;
+}
+input[type="text"]:focus {
+    outline: none;
+}
 .user-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
+  padding: 10px;
+  max-width: 520px;
 }
 
 .user-box{
@@ -58,7 +65,7 @@ input[type="text"]{
   margin-top: 70px;
 }
 body{
-  background: white;
+  background: #C7F2E1;
 }
 h1{
   text-align: center;
