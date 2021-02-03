@@ -10,8 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ * require_tree .
  *= require_self
+
  */
 
 @import "bootstrap";
@@ -23,7 +24,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body{
   color: #5e5e5e;
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;

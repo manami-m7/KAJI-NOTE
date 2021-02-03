@@ -5,3 +5,31 @@
 body{
   background: white;
 }
+.home-container{
+  background: white;
+  display:flex;
+  flex-flow: column;
+}
+.home-box{
+  overflow-y: scroll;
+  height: 400px;
+}
+.home-item{
+  background: #F3AF7F;
+  justify-content:space-around;
+  border-radius: 10px;
+  text-align: center;
+  padding:1em;
+  margin: 10px;
+}
+.homelink{
+    text-decoration: none;
+    color: #5e5e5e;
+}
+.home-icon{
+    margin: 0 auto 20px;
+}
+h1{
+  text-align: center;
+  padding: 1em 0;
+}

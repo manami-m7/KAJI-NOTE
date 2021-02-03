@@ -1,5 +1,5 @@
 // sign in,sign upデザイン
-body.body {
+body{
   background: #C7F2E1;
   color: #5e5e5e;
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;
@@ -11,10 +11,7 @@ body.body {
   padding: 0 1em;
   max-width: 370px;
 }
-h1{
-  text-align: center;
-  padding: 1em 0;
-}
+
 form{
   padding: 0 1.5em;
 }
@@ -80,6 +77,9 @@ input[type="text"]:focus {
   transition: background 0.3s ease-in-out;
   width: 100%;
 }
+input[type="submit"]:focus {
+    outline: none;
+}
 .form-footer {
   font-size: 1em;
   padding: 2em 0;
@@ -92,4 +92,8 @@ input[type="text"]:focus {
 }
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
+}
+h1{
+  text-align: center;
+  padding: 1em 0;
 }
