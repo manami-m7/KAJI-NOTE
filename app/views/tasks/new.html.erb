@@ -2,7 +2,7 @@
   <%= stylesheet_link_tag 'tasks' %>
 <% end %>
 
-<h1>Create Task</h1>
+<h1>Create new Task</h1>
 <%= form_with model: @task, local:true do |f| %>
   <%= f.text_area :task_name, placeholder: "新しい家事を入力" %>
   <%= f.submit '作成' %>

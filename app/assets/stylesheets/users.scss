@@ -6,7 +6,6 @@
   margin: 5em 0 0;
   width: 100%;
 }
-
 .actions input[type="submit"] {
   background: #F3AF7F;
   border: none;
@@ -20,8 +19,8 @@
   text-transform: uppercase;
   transition: background 0.3s ease-in-out;
   width: 100%;
+  border-radius: 10px;
 }
-
 input[type="email"]{
   border: none;
   border-bottom: 1px solid #8c8c8c;
@@ -50,10 +49,9 @@ input[type="text"]:focus {
     outline: none;
 }
 .user-form-wrapper{
-  background-color: white;
   margin: 5em auto;
-  padding: 10px;
-  max-width: 520px;
+  width: 100%;
+  background: white;
 }
 
 .user-box{
@@ -65,7 +63,7 @@ input[type="text"]:focus {
   margin-top: 70px;
 }
 body{
-  background: #C7F2E1;
+  background: white;
 }
 h1{
   text-align: center;

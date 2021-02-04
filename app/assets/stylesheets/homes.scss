@@ -5,6 +5,10 @@
 body{
   background: white;
 }
+.home-h1{
+  text-align: center;
+  padding: 1em 0;
+}
 .home-container{
   background: white;
   display:flex;
@@ -12,7 +16,7 @@ body{
 }
 .home-box{
   overflow-y: scroll;
-  height: 70vh;
+  height: 63vh;
   background: #f5fffc;
 }
 .home-item{
@@ -33,7 +37,4 @@ body{
 .fa-plus{
   color: #F3AF7F;
 }
-h1{
-  text-align: center;
-  padding: 1em 0;
-}
+
