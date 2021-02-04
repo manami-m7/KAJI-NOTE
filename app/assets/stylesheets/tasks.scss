@@ -43,7 +43,7 @@ body{
   height: 150px;
   width: 100%;
   outline: none;
-  font-size: 100%;
+  // font-size: 100%;
 }
 .actions{
   margin: 5em 0 0;
@@ -63,4 +63,15 @@ body{
   transition: background 0.3s ease-in-out;
   width: 100%;
   border-radius: 10px;
+}
+
+// task編集ページ
+.task-edit-form-wrapper{
+  margin: 5em auto;
+  width: 100%;
+  background: white;
+}
+.task-edit-box{
+  margin: 50px auto;
+  width: 500px;
 }

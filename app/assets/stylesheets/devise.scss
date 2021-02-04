@@ -2,13 +2,16 @@
 body{
   background: #C7F2E1;
 }
+h1{
+  text-align: center;
+  padding: 1em 0;
+}
 .form-wrapper{
   background-color: white;
   margin: 5em auto;
   padding: 0 1em;
   max-width: 370px;
 }
-
 form{
   padding: 0 1.5em;
 }
@@ -89,8 +92,4 @@ input[type="submit"]:focus {
 }
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
-}
-h1{
-  text-align: center;
-  padding: 1em 0;
 }
