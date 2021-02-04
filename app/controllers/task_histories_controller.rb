@@ -4,7 +4,7 @@ protect_from_forgery :except => [:start]
 require "date"
 
   def new
-    @task_id = params[:task_id]
+    @task = Task.find(params[:task_id])
     @task_history = current_user.task_histories.find_by(finish_time: nil)
     render :new
   end

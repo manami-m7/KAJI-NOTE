@@ -6,7 +6,7 @@
 <div class="task-edit-form-wrapper">
   <%= form_with model: @task, local:true do |f| %>
     <div class="task-edit-box">
-      <%= f.text_area :task_name, class: "textarea" %>
+      <%= f.text_field :task_name, class: "textfield" %>
       <div class="actions"><%= f.submit 'edit' %></div>
     </div>
   <% end %>
