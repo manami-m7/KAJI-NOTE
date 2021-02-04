@@ -1,2 +1,15 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'homes' %>
+<% end %>
+
+<h1 class="home-h1">kaji-note</h1>
+
+<div class="home-top-wrapper">
+  <div class="home-top-box">
+    <a href="/users/sign_up" class="btn-square">Create an account</a>
+  </div>
+
+  <div class="home-top-box">
+    <a href="/users/sign_in" class="btn-square">log in</a>
+  </div>
+</div>
