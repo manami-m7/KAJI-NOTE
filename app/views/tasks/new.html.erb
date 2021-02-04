@@ -2,8 +2,12 @@
   <%= stylesheet_link_tag 'tasks' %>
 <% end %>
 
-<h1>Create new Task</h1>
+<h1 class="task-h1">Create new Task</h1>
+<div class="task-new-form-wrapper">
 <%= form_with model: @task, local:true do |f| %>
-  <%= f.text_area :task_name, placeholder: "新しい家事を入力" %>
-  <%= f.submit '作成' %>
+<div class="task-new-box">
+  <%= f.text_area :task_name, placeholder: "Please Enter the new housework to be added here", class: "textarea" %>
+  <div class="actions"><%= f.submit 'create' %></div>
+</div>
 <% end %>
+</div>
