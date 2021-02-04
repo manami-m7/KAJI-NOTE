@@ -27,6 +27,11 @@ require "date"
 
   def index
     @task_histories = TaskHistory.where(user_id: current_user.id).where("created_at >= ?", Date.today)
+    @task_time = 0
+    @task_histories.each do |task_history|
+      @task_time = @task_time + task_history.time_diff
+      p @task_time
+    end
   end
 
   def edit

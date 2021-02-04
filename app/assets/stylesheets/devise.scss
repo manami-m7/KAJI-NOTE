@@ -1,0 +1,96 @@
+// sign in,sign upデザイン
+body{
+  background: #C7F2E1;
+}
+.form-wrapper{
+  background-color: white;
+  margin: 5em auto;
+  padding: 0 1em;
+  max-width: 370px;
+}
+
+form{
+  padding: 0 1.5em;
+}
+input[type="email"]{
+  background: white;
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+  margin-top: 30px;
+}
+input[type="password"]{
+  background: white;
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+  margin-top: 30px;
+}
+input[type="text"]{
+  background: white;
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+input[type="email"]:focus {
+    outline: none;
+}
+input[type="password"]:focus {
+    outline: none;
+}
+input[type="text"]:focus {
+    outline: none;
+}
+.actions{
+  margin: 2em 0 0;
+  width: 100%;
+}
+.actions input[type="submit"] {
+  background: #F3AF7F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+input[type="submit"]:focus {
+    outline: none;
+}
+.form-footer {
+  font-size: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+.form-footer a {
+  color: #8c8c8c;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+.form-footer a:hover {
+  border-bottom: 1px dotted #8c8c8c;
+}
+h1{
+  text-align: center;
+  padding: 1em 0;
+}

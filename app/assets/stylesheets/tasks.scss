@@ -1,3 +1,66 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.task-h1{
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: 35px;
+}
+body{
+  background: white;
+}
+// indexページ
+.task-container{
+  background: #f5fffc;
+  display:flex;
+  flex-flow: column;
+}
+.task-box{
+  overflow-y: scroll;
+  height: 70vh;
+}
+.task-item{
+  background: #C7F2E1;
+  justify-content:space-around;
+  border-radius: 10px;
+  text-align: center;
+  padding:1em;
+  margin: 10px;
+}
+
+// newページ
+.task-new-form-wrapper{
+  margin: 5em auto;
+  width: 100%;
+  background: white;
+}
+.task-new-box{
+  margin: 50px auto;
+  width: 500px;
+}
+.textarea{
+  height: 150px;
+  width: 100%;
+  outline: none;
+  font-size: 100%;
+}
+.actions{
+  margin: 5em 0 0;
+  width: 100%;
+}
+.actions input[type="submit"] {
+  background: #F3AF7F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 10px;
+}

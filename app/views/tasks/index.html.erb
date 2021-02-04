@@ -1,18 +1,19 @@
-<h2>家事タスク一覧</h2>
-<table class="table">
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.task_name %></td>
-        <td><%= link_to "編集", edit_task_path(task) %></td>
-        <td>
-            <%= link_to "削除", task_path(task), method: :delete, data:
-            { confirm: '本当に削除して良いですか?',
-              cancel: 'やめる',
-              commit: '削除する'}, title: '削除確認' %>
-        </td>
-      </tr>
-    <% end %>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'tasks' %>
+<% end %>
 
-  </tbody>
-</table>
+<h1 class="task-h1">Task</h1>
+<div class="task-container">
+  <div class="task-box">
+    <% @tasks.each do |task| %>
+      <div class="task-item">
+        <%= task.task_name %>
+        <%= link_to "編集", edit_task_path(task) %>
+        <%= link_to "削除", task_path(task), method: :delete, data:
+          { confirm: '本当に削除して良いですか?',
+            cancel: 'やめる',
+            commit: '削除する'}, title: '削除確認' %>
+      </div>
+    <% end %>
+  </div>
+</div>
