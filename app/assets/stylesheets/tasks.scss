@@ -4,24 +4,26 @@
 
 .task-h1{
   text-align: center;
-  padding: 1em 0;
-  margin-bottom: 35px;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  color: #479677;
 }
+
 body{
-  background: white;
+  background: #C7F2E1;
 }
 // indexページ
 .task-container{
-  background: #f5fffc;
+  background: #C7F2E1;
   display:flex;
   flex-flow: column;
 }
 .task-box{
   overflow-y: scroll;
-  height: 70vh;
+  height: 75vh;
 }
 .task-item{
-  background: #C7F2E1;
+  background:white;
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
@@ -31,15 +33,14 @@ body{
 
 // newページ
 .task-new-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
-  background: white;
+  width: 400px;
 }
 .task-new-box{
-  margin: 50px auto;
-  width: 500px;
+  padding: 50px 15px;
 }
-.textarea{
+.textfield{
   height: 150px;
   width: 100%;
   outline: none;
@@ -67,11 +68,10 @@ body{
 
 // task編集ページ
 .task-edit-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
-  background: white;
+  width: 400px;
 }
 .task-edit-box{
-  margin: 50px auto;
-  width: 500px;
+  padding: 50px 15px;
 }

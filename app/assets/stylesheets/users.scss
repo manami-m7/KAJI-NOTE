@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-  background: white;
+  background: #C7F2E1;
 }
 h1{
   text-align: center;
-  padding: 1em 0;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  color: #479677;
 }
 .actions{
   margin: 5em 0 0;
@@ -56,14 +58,14 @@ input[type="text"]:focus {
     outline: none;
 }
 .user-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
-  background: white;
+  padding: 0 1em;
+  width: 400px;
 }
 
 .user-box{
-  width: 500px;
-  margin: 30px auto;
+  padding: 20px 10px;
 }
 
 .email-box{

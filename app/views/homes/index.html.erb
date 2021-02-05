@@ -12,11 +12,9 @@
 
   <div class="home-box">
   <% @tasks.each do |task| %>
-    <div class="home-item">
-      <%= link_to new_task_history_path(:task_id => task.id), class: "homelink" do %>
+      <%= link_to new_task_history_path(:task_id => task.id), class: "btn btn-link btn-block" do %>
       <%= task.task_name %>
       <% end %>
-    </div>
   <% end %>
   </div>
 </div>

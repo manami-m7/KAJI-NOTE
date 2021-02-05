@@ -6,7 +6,7 @@
 <div class="task-new-form-wrapper">
 <%= form_with model: @task, local:true do |f| %>
 <div class="task-new-box">
-  <%= f.text_area :task_name, placeholder: "Please Enter the new housework to be added here", class: "textarea" %>
+  <%= f.text_field :task_name, placeholder: "Please Enter the new housework to be added here", class: "textfield" %>
   <div class="actions"><%= f.submit 'create' %></div>
 </div>
 <% end %>

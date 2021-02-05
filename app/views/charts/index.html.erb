@@ -1,2 +1,6 @@
-<h1>円グラフ</h1>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'charts' %>
+<% end %>
+
+<h1 class="chart-h1">Chart</h1>
 <%= pie_chart @charts_data %>

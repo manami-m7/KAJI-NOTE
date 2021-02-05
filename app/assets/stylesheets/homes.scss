@@ -3,35 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-  background: white;
+  background: #C7F2E1;
 }
 .home-h1{
   text-align: center;
-  padding: 1em 0;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  color: #479677;
 }
 
 // homeのタスク一覧ページ
 .home-container{
-  background: white;
+  background: #C7F2E1;
   display:flex;
   flex-flow: column;
 }
 .home-box{
   overflow-y: scroll;
-  height: 63vh;
-  background: #f5fffc;
-}
-.home-item{
+  height: 68vh;
   background: #C7F2E1;
+}
+.btn-link{
+  background: white;
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
   padding:1em;
   margin: 10px;
+  text-decoration: none;
+  color: #5e5e5e;
+  border: none;
 }
-.homelink{
-    text-decoration: none;
+.btn-link:hover, .btn-link:focus,
+.btn-link:active, .btn-link:active:focus, .btn-link:active:hover, .btn-link:active.focus,
+.btn-link.active, .btn-link.active:focus, .btn-link.active:hover, .btn-link.active.focus,
+.open > .dropdown-toggle.btn-link,
+.open > .dropdown-toggle.btn-link:hover,
+.open > .dropdown-toggle.btn-link:focus,
+.open > .dropdown-toggle.btn-link.focus,
+.btn-link.disabled:hover, .btn-link[disabled]:hover, fieldset[disabled] .btn-link:hover,
+.btn-link.disabled:focus, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:focus,
+.btn-link.disabled.focus, .btn-link[disabled].focus, fieldset[disabled] .btn-link.focus {
+    background: #F3AF7F;
     color: #5e5e5e;
+    opacity: 0.7;
 }
 .home-icon{
     margin: 0 auto 20px;
