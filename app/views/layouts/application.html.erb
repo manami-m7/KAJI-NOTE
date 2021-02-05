@@ -7,6 +7,7 @@
     <title>KajiNote</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -67,13 +68,13 @@
             <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x"></i><% end %>
           </div>
           <div class="footer-icon">
-            <%= link_to home_path do %><i class="fas fa-home fa-3x"></i><% end %>
+            <%= link_to home_path do %><i class="fas fa-home fa-3x faa-shake animated-hover"></i><% end %>
           </div>
           <div class="footer-icon">
-            <%= link_to task_histories_path do %><i class="fas fa-history fa-3x"></i><% end %>
+            <%= link_to task_histories_path do %><i class="fas fa-history fa-3x faa-bounce animated-hover"></i><% end %>
           </div>
           <div class="footer-icon">
-            <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x"></i><% end %>
+            <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x faa-tada animated-hover"></i><% end %>
           </div>
         </div>
        </footer>

@@ -33,13 +33,12 @@ body{
 
 // newページ
 .task-new-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
-  background: white;
+  width: 400px;
 }
 .task-new-box{
-  margin: 50px auto;
-  width: 500px;
+  padding: 50px 15px;
 }
 .textfield{
   height: 150px;
@@ -69,11 +68,10 @@ body{
 
 // task編集ページ
 .task-edit-form-wrapper{
+  background-color: white;
   margin: 5em auto;
-  width: 100%;
-  background: white;
+  width: 400px;
 }
 .task-edit-box{
-  margin: 50px auto;
-  width: 500px;
+  padding: 50px 15px;
 }

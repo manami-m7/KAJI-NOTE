@@ -157,10 +157,12 @@ body{
     bottom: 0;
     width: 100%;
     height: 70px;
-    border-top: 3px solid #C7F2E1;
+    border-top: 1px solid #8c8c8c;
     display: flex;
     justify-content: center;
-    background: white;
+    background: #C7F2E1;
+    opacity: 0.8;
+    border-radius: 10px;
 }
 .footer-icon{
     display:flex;
@@ -177,32 +179,20 @@ body{
 }
 
 // アイコンカラー
-.fa-clipboard-list{
+.fa-clipboard-list, .fa-history, .fa-chart-pie, .fa-home, .fa-user-cog,
+.fa-sign-out-alt, .fa-sign-in-alt, .fa-user-plus, .fa-home{
   color: #8c8c8c;
 }
-.fa-plus{
-  color: #8c8c8c;
+.fa-clipboard-list:hover, .fa-history:hover, .fa-chart-pie:hover, .fa-user-cog:hover,
+.fa-sign-out-alt:hover, .fa-sign-in-alt:hover, .fa-user-plus:hover, .fa-home:hover{
+  color: #F3AF7F;
 }
-.fa-history{
-  color: #8c8c8c;
-}
-.fa-chart-pie{
-  color: #8c8c8c;
-}
-.fa-home{
-  color: #8c8c8c;
-}
-.fa-user-cog{
-  color: #8c8c8c;
-}
-.fa-sign-out-alt{
-  color: #8c8c8c;
-}
-.fa-sign-in-alt{
-  color: #8c8c8c;
-}
-.fa-user-plus{
-  color: #8c8c8c;
-}
+
+
+
+
+
+
+
 
 
