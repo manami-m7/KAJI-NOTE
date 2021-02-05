@@ -6,7 +6,7 @@
   text-align: center;
   padding: 20px 0;
   margin-bottom: 10px;
-  color: #479677;
+  color: #757171;
 }
 
 body{
@@ -31,47 +31,4 @@ body{
   margin: 10px;
 }
 
-// newページ
-.task-new-form-wrapper{
-  background-color: white;
-  margin: 5em auto;
-  width: 400px;
-}
-.task-new-box{
-  padding: 50px 15px;
-}
-.textfield{
-  height: 150px;
-  width: 100%;
-  outline: none;
-  // font-size: 100%;
-}
-.actions{
-  margin: 5em 0 0;
-  width: 100%;
-}
-.actions input[type="submit"] {
-  background: #F3AF7F;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  height: 50px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background 0.3s ease-in-out;
-  width: 100%;
-  border-radius: 10px;
-}
 
-// task編集ページ
-.task-edit-form-wrapper{
-  background-color: white;
-  margin: 5em auto;
-  width: 400px;
-}
-.task-edit-box{
-  padding: 50px 15px;
-}

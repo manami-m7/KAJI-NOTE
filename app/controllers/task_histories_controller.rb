@@ -15,7 +15,9 @@ require "date"
     @task_history.start_time = DateTime.now
     @task_history.user_id = current_user.id
     @task_history.save
+     @task = Task.find(params[:task_id])
     render :new
+
   end
 
   def finish
@@ -26,6 +28,7 @@ require "date"
   end
 
   def index
+
     @task_histories = TaskHistory.where(user_id: current_user.id).where("created_at >= ?", Date.today)
     @task_time = 0
     @task_histories.each do |task_history|

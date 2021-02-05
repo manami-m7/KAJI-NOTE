@@ -1,11 +1,12 @@
 <% content_for :css do %>
-  <%= stylesheet_link_tag 'tasks' %>
+  <%= stylesheet_link_tag 'edit_new' %>
 <% end %>
 
 <h1 class="task-h1">Edit Task</h1>
 <div class="task-edit-form-wrapper">
   <%= form_with model: @task, local:true do |f| %>
     <div class="task-edit-box">
+      <%= f.label :name, 'Task Name' %>
       <%= f.text_field :task_name, class: "textfield" %>
       <div class="actions"><%= f.submit 'edit' %></div>
     </div>

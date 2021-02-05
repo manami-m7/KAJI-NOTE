@@ -1,26 +1,30 @@
 <% content_for :css do %>
-  <%= stylesheet_link_tag 'task_histories' %>
+  <%= stylesheet_link_tag 'edit_new' %>
 <% end %>
 
-<h1 class="task-history-h1">timer</h1>
+<h1 class="task-history-h1">Timer</h1>
 
-<%= @task.task_name %>
-
-<%= form_tag("start", method: :post, id: @task.id) do %>
-  <%= hidden_field_tag :task_id, @task.id %>
-  <% if @task_history.present? %>
-    <input type="submit" value="Time Start" disabled>
-  <% else %>
-    <input type="submit" value="Time Start">
+<div class="task-history-new-form-wrapper">
+  <h2><%= @task.task_name %></h2>
+<div class="start">
+  <%= form_tag("start", method: :post, id: @task.id) do %>
+    <%= hidden_field_tag :task_id, @task.id %>
+    <% if @task_history.present? %>
+      <input type="submit" value="Time Start" disabled>
+    <% else %>
+      <input type="submit" value="Time Start">
+    <% end %>
   <% end %>
-<% end %>
-
-<%= form_tag("finish", method: :patch, action: :finish, id: @task_history_id) do %>
-  <% if @task_history.nil? %>
-    <input type="submit" value="Time End" disabled>
-  <% else %>
-    <%= hidden_field_tag :task_history_id, @task_history.id %>
-    <input type="submit" value="Time End">
+</div>
+<div class="finish">
+  <%= form_tag("finish", method: :patch, action: :finish, id: @task_history_id) do %>
+    <% if @task_history.nil? %>
+      <input type="submit" value="Time End" disabled>
+    <% else %>
+      <%= hidden_field_tag :task_history_id, @task_history.id %>
+      <input type="submit" value="Time End">
+    <% end %>
   <% end %>
-<% end %>
-
+  </div>
+</div>
+</div>

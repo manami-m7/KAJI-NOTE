@@ -3,13 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-  background: #C7F2E1;
+  background: white;
 }
 h1{
   text-align: center;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  color: #479677;
+  padding: 1em 0;
+  color: #757171;
 }
 .actions{
   margin: 5em 0 0;
@@ -40,7 +39,6 @@ input[type="email"]{
   transition: border-color 0.3s;
   width: 100%;
 }
-
 input[type="text"]{
   border: none;
   border-bottom: 1px solid #8c8c8c;
@@ -62,12 +60,12 @@ input[type="text"]:focus {
   margin: 5em auto;
   padding: 0 1em;
   width: 400px;
+  border-style: solid;
+  border-color: #C7F2E1;
 }
-
 .user-box{
   padding: 20px 10px;
 }
-
 .email-box{
   margin-top: 70px;
 }
