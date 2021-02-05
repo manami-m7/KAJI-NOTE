@@ -1,12 +1,12 @@
 <% content_for :css do %>
-  <%= stylesheet_link_tag 'tasks' %>
+  <%= stylesheet_link_tag 'edit_new' %>
 <% end %>
 
 <h1 class="task-h1">Create new Task</h1>
 <div class="task-new-form-wrapper">
 <%= form_with model: @task, local:true do |f| %>
 <div class="task-new-box">
-  <%= f.text_field :task_name, placeholder: "Please Enter the new housework to be added here", class: "textfield" %>
+  <%= f.text_field :task_name, placeholder: " Please Enter the new housework to be added here",  class: "textfield" %>
   <div class="actions"><%= f.submit 'create' %></div>
 </div>
 <% end %>

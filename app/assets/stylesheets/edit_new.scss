@@ -1,0 +1,116 @@
+body{
+  background: white;
+}
+.task-h1{
+  text-align: center;
+  padding: 1em 0;
+  color: #757171;
+}
+
+// task/newページ
+.task-new-form-wrapper{
+  background-color: white;
+  margin: 5em auto;
+  width: 400px;
+  border-style: solid;
+  border-color: #C7F2E1;
+}
+.task-new-box{
+  padding: 50px 15px;
+}
+.textfield{
+  border: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+}
+.actions{
+  margin: 5em 0 0;
+  width: 100%;
+}
+.actions input[type="submit"] {
+  background: #F3AF7F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 10px;
+}
+
+// task/editページ
+.task-edit-form-wrapper{
+  background-color: white;
+  margin: 5em auto;
+  width: 400px;
+  border-style: solid;
+  border-color: #C7F2E1;
+}
+.task-edit-box{
+  padding: 50px 15px;
+}
+
+// task_history/newページ
+.task-history-new-form-wrapper{
+  background-color: white;
+  margin: 5em auto;
+  padding: 0 1em 50px;
+  width: 400px;
+  border-style: solid;
+  border-color: #C7F2E1;
+}
+.start{
+  margin: 40px 0 30px;
+  padding-bottom: 10px;
+}
+.finish{
+  margin: 0 0 30px;
+  padding-top: 30px;
+}
+input[type="submit"] {
+  background: #F3AF7F;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 10px;
+}
+h2{
+  text-align: center;
+  padding: 1em 0;
+}
+.task-history-h1{
+   text-align: center;
+  padding: 1em 0;
+  color: #757171;
+}
+
+// ドロワーメニューの色変更
+.menu-drawer .btn {
+  font-size: 27px;
+  background: white;
+  width: 40px;
+  padding: 4px 0;
+  cursor: pointer;
+  text-align: center;
+  top: 0;
+  right: 0;
+}

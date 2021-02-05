@@ -2,12 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ドロワーメニューの色変更
+.menu-drawer .btn {
+  font-size: 27px;
+  background: white;
+  width: 40px;
+  padding: 4px 0;
+  cursor: pointer;
+  text-align: center;
+  top: 0;
+  right: 0;
+}
+
 body{
-  background: #C7F2E1;
+  background: white;
 }
 .chart-h1{
   text-align: center;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  color: #479677;
+  padding: 1em 0;
+  color: #757171;
 }
