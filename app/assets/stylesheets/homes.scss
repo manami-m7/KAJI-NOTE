@@ -12,7 +12,7 @@ body{
   color: #757171;
 }
 
-// homeのタスク一覧ページ
+// home/indexページ
 .home-container{
   background: #C7F2E1;
   display:flex;
@@ -53,9 +53,13 @@ body{
 }
 .fa-plus{
   color: #F3AF7F;
+  border: solid 2px;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 25px;
 }
 
-// homeのトップページ
+// home/topページ
 .home-top-wrapper{
   margin: 5em auto;
   width: 100%;

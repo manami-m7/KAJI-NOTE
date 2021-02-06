@@ -1,13 +1,13 @@
 body{
   background: white;
 }
+
+// task/newページ
 .task-h1{
   text-align: center;
   padding: 1em 0;
   color: #757171;
 }
-
-// task/newページ
 .task-new-form-wrapper{
   background-color: white;
   margin: 5em auto;
@@ -98,11 +98,20 @@ h2{
   padding: 1em 0;
 }
 .task-history-h1{
-   text-align: center;
+  text-align: center;
   padding: 1em 0;
   color: #757171;
 }
 
+// task_history/editページ
+.task-history-edit-form-wrapper{
+  background-color: white;
+  margin: 5em auto;
+  padding: 0 1em 50px;
+  width: 400px;
+  border-style: solid;
+  border-color: #C7F2E1;
+}
 // ドロワーメニューの色変更
 .menu-drawer .btn {
   font-size: 27px;
