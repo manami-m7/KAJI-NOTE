@@ -70,3 +70,14 @@ input[type="text"]:focus {
   margin-top: 70px;
 }
 
+// ドロワーメニューの色変更
+.menu-drawer .btn {
+  font-size: 27px;
+  background: white;
+  width: 40px;
+  padding: 4px 0;
+  cursor: pointer;
+  text-align: center;
+  top: 0;
+  right: 0;
+}

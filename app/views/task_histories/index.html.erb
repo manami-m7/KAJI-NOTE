@@ -1,31 +1,41 @@
 <%= stylesheet_link_tag 'task_histories' %>
 
 <h1 class="task-history-h1">History</h1>
-<h3>今日の家事数<%= @task_histories.count %>：総時間<%= @task_time %>分</h3>
-<table class="table">
-  <tr>
-    <th>day</th>
-    <th>task</th>
-    <th>start time</th>
-    <th>finish time</th>
-    <th>経過時間（分）</th>
-  </tr>
-  <tbody>
+<div class="task-history-container">
+  <!--今日の合計-->
+  <div class="today-result">今日の家事 <%= @task_histories_today.count %>個：総時間<%= @task_time %>min</div>
+
+ <!--全てのの履歴一覧-->
+  <div class="task-history-box">
+    <% date = '' %>
     <% @task_histories.each do |task_history| %>
-      <tr>
-        <td><%= simple_day(task_history.start_time) %></td>
-        <td><%= task_history.task.task_name %></td>
-        <td><%= simple_time(task_history.start_time) %></td>
-        <td><%= simple_time(task_history.finish_time) %></td>
-        <td><%= task_history.time_diff %></td>
-        <td><%= link_to "編集", edit_task_history_path(task_history) %></td>
-        <td>
-            <%= link_to "削除", task_history_path(task_history), method: :delete, data:
-            { confirm: '本当に削除して良いですか?',
-              cancel: 'やめる',
-              commit: '削除する'}, title: '削除確認' %>
-        </td>
-      </tr>
+    <% if date != simple_day(task_history.start_time) %>
+    <div class="task-history-date">
+        <%= simple_day(task_history.start_time) %>
+    </div>
     <% end %>
-  </tbody>
-</table>
+    <% date = simple_day(task_history.start_time) %>
+      <div class="task-history-item">
+
+        <ul class="task-history-block">
+          <li class="task-history-name"><%= task_history.task.task_name %></li>
+          <li class="task-history-time"><%= task_history.time_diff %>min</li>
+          <li class="task-history-time-diff">(<%= simple_time(task_history.start_time) %>〜<%= simple_time(task_history.finish_time) %>)</li>
+          <li class="task-history-edit">
+          <%= link_to edit_task_history_path(task_history), class: 'btn btn-outline-info' do %>
+            <span class="fas fa-pencil-alt"></span>
+          <% end %>
+          </li>
+          <li class="task-history-delete">
+          <%= link_to task_history_path(task_history), method: :delete, data:
+              { confirm: '本当に削除して良いですか?',
+                cancel: 'やめる',
+                commit: '削除する'}, title: '削除確認', class: 'btn btn-outline-warning' do %>
+              <span class="fas fa-trash-alt"></span>
+          <% end %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -5,16 +5,16 @@
 <div class="task-history-edit-form-wrapper">
   <%= form_with model: @task_history, local:true do |f| %>
     <h2><%= @task_history.task.task_name %></h2>
-    <div class="form-group">
-      <%= f.label :start_time, 'start_time' %>
-      <%= f.time_select :start_time %>
+    <div class="start-box">
+      <%= f.label :start_time, 'Start Time', class: "start-text" %>
+      <%= f.time_select :start_time, class: "start-select" %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :finish_time, 'finish_time' %>
+    <div class="finish-box">
+      <%= f.label :finish_time, 'Finish Time', class: "finish-text" %>
       <%= f.time_select :finish_time %>
     </div>
 
-    <div><%= f.submit "Update User" %></div>
+    <div class="actions"><%= f.submit "Update User" %></div>
   <% end %>
 </div>

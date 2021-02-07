@@ -7,20 +7,19 @@
     <% @tasks.each do |task| %>
       <div class="task-item">
         <div>
-        <%= task.task_name %>
+          <%= task.task_name %>
         </div>
-
         <div>
-        <%= link_to edit_task_path(task), class: 'btn btn-outline-info' do %>
-          <span class="fas fa-pencil-alt"></span>
-        <% end %>
-        <%= link_to task_path(task), method: :delete, data:
-        { confirm: '本当に削除して良いですか?',
-          cancel: 'やめる',
-          commit: '削除する'}, title: '削除確認', class: 'btn btn-outline-warning' do %>
-            <span class="fas fa-trash-alt"></span>
-          <%end %>
-          </div>
+          <%= link_to edit_task_path(task), class: 'btn btn-outline-info' do %>
+            <span class="fas fa-pencil-alt"></span>
+          <% end %>
+          <%= link_to task_path(task), method: :delete, data:
+          { confirm: '本当に削除して良いですか?',
+            cancel: 'やめる',
+            commit: '削除する'}, title: '削除確認', class: 'btn btn-outline-warning' do %>
+              <span class="fas fa-trash-alt"></span>
+            <% end %>
+        </div>
       </div>
     <% end %>
   </div>
