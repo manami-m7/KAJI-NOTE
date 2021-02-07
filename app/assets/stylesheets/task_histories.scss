@@ -11,4 +11,83 @@ body{
   margin-bottom: 10px;
   color: #757171;
 }
-
+.task-history-container{
+  background: #C7F2E1;
+  display:flex;
+  flex-flow: column;
+}
+.task-history-box{
+  overflow-y: scroll;
+  height: 68vh;
+}
+.today-result{
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  padding:1em;
+  margin: 10px;
+  text-decoration: none;
+  color: #5e5e5e;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.task-history-item{
+  background: white;
+  justify-content:space-around;
+  border-radius: 10px;
+  text-align: center;
+  padding:1em;
+  margin: 10px;
+  text-decoration: none;
+  color: #5e5e5e;
+  border: none;
+}
+.task-history-date{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.task-history-block{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  aline-items: center;
+  margin: 0;
+}
+.task-history-name{
+  line-height: 42px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.task-history-time{
+  line-height: 42px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.task-history-time-diff{
+  line-height: 42px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.task-history-edit{
+  line-height: 42px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.task-history-delete{
+  line-height: 42px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
