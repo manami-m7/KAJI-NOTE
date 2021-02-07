@@ -37,7 +37,6 @@ body{
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
-  padding:1em;
   margin: 10px;
   text-decoration: none;
   color: #5e5e5e;
@@ -52,19 +51,25 @@ body{
 .task-history-block{
   list-style: none;
   display: flex;
-  aline-items: center;
   margin: 0;
 }
 .task-history-name{
-  line-height: 42px;
-  width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: auto;
+  padding: 20px 0 0 20px;
+  font-size: 1.3em;
 }
 .task-history-list li{
   display: inline-block;
   margin: 0 10px;
   list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+}
+.task-history-edit{
+  margin-top: 10px;
 }
