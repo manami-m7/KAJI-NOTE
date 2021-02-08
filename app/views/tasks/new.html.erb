@@ -3,10 +3,20 @@
 
 <h1 class="task-h1">Create new Task</h1>
 <div class="task-new-form-wrapper">
-<%= form_with model: @task, local:true do |f| %>
-<div class="task-new-box">
-  <%= f.text_field :task_name, placeholder: " Please Enter the new housework to be added here",  class: "textfield" %>
-  <div class="actions"><%= f.submit 'create' %></div>
-</div>
-<% end %>
+
+  <div class="error">
+    <% if @task.errors.any? %>
+      An error occurred while processing your request.<br>
+      <% @task.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= form_with model: @task, local:true do |f| %>
+  <div class="task-new-box">
+    <%= f.text_field :task_name, placeholder: " Please Enter the new housework to be added here",  class: "textfield" %>
+    <div class="actions"><%= f.submit 'create' %></div>
+  </div>
+  <% end %>
 </div>

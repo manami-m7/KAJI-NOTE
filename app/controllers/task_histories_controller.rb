@@ -1,7 +1,9 @@
 class TaskHistoriesController < ApplicationController
 
-protect_from_forgery :except => [:start]
-require "date"
+  before_action :authenticate_user!
+
+  protect_from_forgery :except => [:start]
+  require "date"
 
   def new
     @task = Task.find(params[:task_id])
@@ -17,7 +19,6 @@ require "date"
     @task_history.save
      @task = Task.find(params[:task_id])
     render :new
-
   end
 
   def finish
@@ -38,25 +39,26 @@ require "date"
   end
 
   def edit
-    @task_history = TaskHistory.find(params[:id])
+    @task_history = TaskHistory.where(user_id: current_user.id).find(params[:id])
   end
 
   def update
-    @task_history = TaskHistory.find(params[:id])
+    @task_history = TaskHistory.where(user_id: current_user.id).find(params[:id])
     @task_history.update(task_history_params)
     redirect_to task_histories_path
   end
 
   def destroy
-    @task_history = TaskHistory.find(params[:id])
+    @task_history = TaskHistory.where(user_id: current_user.id).find(params[:id])
     @task_history.destroy
     redirect_to task_histories_path
   end
+
+
 
   private
 
   def task_history_params
     params.require(:task_history).permit(:start_time, :finish_time)
   end
-
 end
