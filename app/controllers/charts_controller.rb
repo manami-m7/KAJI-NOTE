@@ -13,6 +13,9 @@ class ChartsController < ApplicationController
     .pluck(Arel.sql("task_name,ROUND(SUM((strftime('%s',finish_time)-strftime('%s',start_time))/60),1)"))
     .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
 
+    @charts_average = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
+    .pluck(Arel.sql("task_name,ROUND(AVG((strftime('%s',finish_time)-strftime('%s',start_time))/60),1)"))
+    .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
   end
 
 end

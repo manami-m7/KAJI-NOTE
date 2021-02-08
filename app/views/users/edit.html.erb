@@ -1,24 +1,32 @@
-
 <%= stylesheet_link_tag 'users' %>
-
 
 <h1>About Me</h1>
 <div class="user-form-wrapper">
-    <%= form_with model: @user, local:true do |f| %>
-      <div class="user-box">
-        <div class="form-group">
-          <%= f.label :name, 'Name' %>
-          <%= f.text_field :name %>
-        </div>
 
-        <div class="form-group">
-        <div class="email-box">
-          <%= f.label :email, 'Email' %>
-          <%= f.email_field :email %>
-        </div>
-        </div>
-
-        <div class="actions"><%= f.submit "Update User" %></div>
-      </div>
+  <div class="error">
+    <% if @user.errors.any? %>
+      An error occurred while processing your request.<br>
+      <% @user.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
     <% end %>
+  </div>
+
+  <%= form_with model: @user, local:true do |f| %>
+    <div class="user-box">
+      <div class="form-group">
+        <%= f.label :name, 'Name' %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="form-group">
+      <div class="email-box">
+        <%= f.label :email, 'Email' %>
+        <%= f.email_field :email %>
+      </div>
+      </div>
+
+      <div class="actions"><%= f.submit "Update User" %></div>
+    </div>
+  <% end %>
 </div>

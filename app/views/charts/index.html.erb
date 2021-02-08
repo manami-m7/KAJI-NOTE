@@ -3,4 +3,12 @@
 
 
 <h1 class="chart-h1">Chart</h1>
-<%= pie_chart @charts_data %>
+<div class="chart-container">
+  <div class="pie-chart">
+    <%= pie_chart @charts_data %>
+  </div>
+  <div class="bar-chart">
+    <h2 class="chart-h2">average time(min)</h2>
+    <%= bar_chart @charts_average %>
+  </div>
+</div>

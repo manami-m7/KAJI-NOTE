@@ -1,33 +1,40 @@
 class TasksController < ApplicationController
+
+  before_action :authenticate_user!
+
   def new
     @task = Task.new
   end
 
   def create
     @task = Task.new(task_params)
-    @task.group_id = current_user.group.id
-    @task.save
-    redirect_to home_path
+    @task.user_id = current_user.id
+    if @task.save
+      redirect_to home_path
+    else
+      render :new
+    end
   end
 
   def index
-    @tasks = Task.where(group_id: current_user.group.id)
+    @tasks = Task.where(user_id: current_user.id)
   end
 
-
-
   def edit
-    @task = Task.find(params[:id])
+    @task = Task.where(user_id: current_user.id).find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
-    @task.update(task_params)
-    redirect_to tasks_path
+    @task = Task.where(user_id: current_user.id).find(params[:id])
+    if @task.update(task_params)
+      redirect_to tasks_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    @task = Task.where(user_id: current_userid).find(params[:id])
     @task.destroy
     redirect_to tasks_path
   end
