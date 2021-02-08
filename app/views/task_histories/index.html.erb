@@ -16,17 +16,17 @@
     <% end %>
     <% date = simple_day(task_history.start_time) %>
       <div class="task-history-item">
-
-        <ul class="task-history-block">
-          <li class="task-history-name"><%= task_history.task.task_name %></li>
-          <li class="task-history-time"><%= task_history.time_diff %>min</li>
-          <li class="task-history-time-diff">(<%= simple_time(task_history.start_time) %>〜<%= simple_time(task_history.finish_time) %>)</li>
-          <li class="task-history-edit">
+        <div class="task-history-block">
+          <div class="task-history-name"><%= task_history.task.task_name %></div>
+          <ul class="task-history-list">
+          <li><%= task_history.time_diff %>min</li>
+          <li>(<%= simple_time(task_history.start_time) %>〜<%= simple_time(task_history.finish_time) %>)</li>
+          <li>
           <%= link_to edit_task_history_path(task_history), class: 'btn btn-outline-info' do %>
             <span class="fas fa-pencil-alt"></span>
           <% end %>
           </li>
-          <li class="task-history-delete">
+          <li>
           <%= link_to task_history_path(task_history), method: :delete, data:
               { confirm: '本当に削除して良いですか?',
                 cancel: 'やめる',
@@ -34,7 +34,8 @@
               <span class="fas fa-trash-alt"></span>
           <% end %>
           </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     <% end %>
   </div>

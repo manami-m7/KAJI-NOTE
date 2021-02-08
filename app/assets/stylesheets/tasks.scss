@@ -32,9 +32,15 @@ body{
   display:flex;
   justify-content: flex-end;
     div:nth-child(1){
-      margin: 0 auto;
-      padding: 10px 0 0 60px;
+      margin: 0 auto 0 50px;
+      padding-top: 10px;
+      font-size: 1.3em;
     }
 }
-
+.btn-outline-info{
+  margin-right: 20px;
+}
+.btn-outline-warning{
+  margin-right: 30px;
+}
 

@@ -37,7 +37,6 @@ body{
   justify-content:space-around;
   border-radius: 10px;
   text-align: center;
-  padding:1em;
   margin: 10px;
   text-decoration: none;
   color: #5e5e5e;
@@ -52,42 +51,26 @@ body{
 .task-history-block{
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  aline-items: center;
   margin: 0;
+  padding-top: 10px;
 }
 .task-history-name{
-  line-height: 42px;
-  width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0 auto 0 20px;
+  padding: 15px 0 0 20px;
+  font-size: 1.3em;
 }
-.task-history-time{
-  line-height: 42px;
-  width: 150px;
+.task-history-list li{
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 20px;
 }
-.task-history-time-diff{
-  line-height: 42px;
-  width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.task-history-edit{
-  line-height: 42px;
-  width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.task-history-delete{
-  line-height: 42px;
-  width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// .btn-outline-info{
+//   margin-top: 10px;
+// }
