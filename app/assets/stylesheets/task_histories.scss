@@ -52,13 +52,14 @@ body{
   list-style: none;
   display: flex;
   margin: 0;
+  padding-top: 10px;
 }
 .task-history-name{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: auto;
-  padding: 20px 0 0 20px;
+  margin: 0 auto 0 20px;
+  padding: 15px 0 0 20px;
   font-size: 1.3em;
 }
 .task-history-list li{
@@ -70,6 +71,6 @@ body{
   text-overflow: ellipsis;
   padding-right: 20px;
 }
-.task-history-edit{
-  margin-top: 10px;
-}
+// .btn-outline-info{
+//   margin-top: 10px;
+// }
