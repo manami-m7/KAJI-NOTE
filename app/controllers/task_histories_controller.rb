@@ -1,6 +1,7 @@
 class TaskHistoriesController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :ensure_correct_user, only: [:new, :edit, :update, :destroy]
 
   protect_from_forgery :except => [:start]
   require "date"
@@ -17,12 +18,12 @@ class TaskHistoriesController < ApplicationController
     @task_history.start_time = DateTime.now
     @task_history.user_id = current_user.id
     @task_history.save
-     @task = Task.find(params[:task_id])
+     @task = Task.where(user_id: current_user.id).find(params[:task_id])
     render :new
   end
 
   def finish
-    @task_history = TaskHistory.find(params[:task_history_id])
+    @task_history = TaskHistory.where(user_id: current_user.id).find(params[:task_history_id])
     @task_history.finish_time = DateTime.now
     @task_history.save
     redirect_to task_histories_path
@@ -54,11 +55,16 @@ class TaskHistoriesController < ApplicationController
     redirect_to task_histories_path
   end
 
-
-
   private
 
   def task_history_params
     params.require(:task_history).permit(:start_time, :finish_time)
+  end
+
+  def ensure_correct_user
+    @task_history = Task.find(params[:task_id])
+    unless @task_history.user_id == current_user.id
+      redirect_to root_path
+    end
   end
 end
