@@ -88,3 +88,7 @@ group :production do
 end
 
 gem 'groupdate'
+
+group :development do
+  gem 'pry-rails'
+end
