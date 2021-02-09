@@ -1,16 +1,22 @@
 
 <%= stylesheet_link_tag 'homes' %>
 
-
-
 <h1 class="home-h1">kaji-note</h1>
 
 <div id="box">
   <div id="images">
-    <div class="image1"></div>
-    <div class="image2"></div>
-    <div class="image3"></div>
-    <div class="image4"></div>
+    <div class="image-container">
+      <%= image_tag 'home.png', class: 'image1' %>
+    </div>
+    <div class="image-container">
+      <%= image_tag 'timer.png', class: 'image1' %>
+    </div>
+    <div class="image-container">
+      <%= image_tag 'history.png', class: 'image1' %>
+    </div>
+    <div class="image-container">
+      <%= image_tag 'chart.png', class: 'image1' %>
+    </div>
   </div>
 </div>
 
@@ -23,3 +29,22 @@
     <a href="/users/sign_in" class="btn-square">log in</a>
   </div>
 </div>
+
+
+<!--スライドの記述-->
+<script type"text/javascript">
+$(document).ready(function () {
+  $("#images").skippr({
+    transition : 'slide',
+    speed : 1000,
+    easing : 'easeOutQuart',
+    navType : 'block',
+    childrenElementType : 'div',
+    arrows : true,
+    autoPlay : true,
+    autoPlayDuration : 3000,
+    keyboardOnAlways : true,
+    hidePrevious : false
+  });
+});
+</script>
