@@ -84,3 +84,19 @@ body{
   transform: translateY(4px);/*下に動く*/
   border-bottom: none;/*線を消す*/
 }
+
+#box{
+  height: 400px;
+}
+.image1 {
+  background-image: url(home.png);
+}
+.image2 {
+  background-image: url(timer.png);
+}
+.image3 {
+  background-image: url(history.png);
+}
+.image4 {
+  background-image: url(chart.png);
+}
