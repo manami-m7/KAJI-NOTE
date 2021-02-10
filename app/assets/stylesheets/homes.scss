@@ -83,18 +83,40 @@ body{
   transform: translateY(4px);/*下に動く*/
   border-bottom: none;/*線を消す*/
 }
+
+
 #box{
   height: 400px;
   background: white;
-  display: flex;
 }
+
 .image1 {
+  background-image: url("logo.png");
   height: 400px;
+  width: 400px;
+  background-size: cover;
 }
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.image2 {
+  background-image: url("home.png");
   height: 400px;
+  width: 350px;
+  background-size: cover;
+}
+.image3 {
+  background-image: url("timer.png");
+  height: 400px;
+  width: 350px;
+  background-size: cover;
+}
+.image4 {
+  background-image: url("history.png");
+  height: 400px;
+  width: 350px;
+  background-size: cover;
+}
+.image5 {
+  background-image: url("chart.png");
+  height: 400px;
+  width: 350px;
+  background-size: cover;
 }
