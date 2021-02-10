@@ -14,7 +14,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require data-confirm-modal
+
 
 //= require rails-ujs
 //= require activestorage
@@ -23,3 +23,5 @@
 // chartkickインストールにより追記
 //= require chartkick
 //= require Chart.bundle
+
+//= require data-confirm-modal
