@@ -8,14 +8,24 @@ class ChartsController < ApplicationController
     #   end
     #   @charts_data[Task.find(t.task_id).task_name] += t.time_diff
     # end
+    if Rails.env.production?
+      @charts_data = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
+    .pluck(Arel.sql("task_name,ROUND(SUM((DATE_FORMAT(finish_time, '%s')-DATE_FORMAT(finish_time, '%s'))/60),1)"))
+    .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
 
-     @charts_data = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
+    @charts_average = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
+    .pluck(Arel.sql("task_name,ROUND(AVG((DATE_FORMAT(finish_time, '%s')-DATE_FORMAT(finish_time, '%s'))/60),1)"))
+    .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
+    else
+      @charts_data = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
     .pluck(Arel.sql("task_name,ROUND(SUM((strftime('%s',finish_time)-strftime('%s',start_time))/60),1)"))
     .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
 
     @charts_average = TaskHistory.where(user_id: current_user.id).joins(:task).group(:task_id)
     .pluck(Arel.sql("task_name,ROUND(AVG((strftime('%s',finish_time)-strftime('%s',start_time))/60),1)"))
     .map{ |th| {th[0]=>th[1]}}.reduce(&:merge)
+    end
+
   end
 
 end
