@@ -23,10 +23,8 @@ class TaskHistoriesController < ApplicationController
   end
 
   def finish
-    # binding.pry
     @task_history = TaskHistory.where(user_id: current_user.id).find(params[:task_history_id])
     @task_history.finish_time = DateTime.now
-
     @task_history.save
     redirect_to task_histories_path
   end
