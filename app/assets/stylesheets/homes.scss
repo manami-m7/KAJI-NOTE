@@ -5,7 +5,7 @@
 body{
   background: #C7F2E1;
 }
-.home-h1{
+h1{
   text-align: center;
   padding: 20px 0;
   margin-bottom: 10px;
@@ -85,38 +85,15 @@ body{
 }
 
 
-#box{
-  height: 400px;
-  background: white;
-}
 
-.image1 {
-  background-image: url("logo.png");
-  height: 400px;
-  width: 400px;
-  background-size: cover;
+h2{
+  text-align: center;
+  margin: 20px auto;
 }
-.image2 {
-  background-image: url("home.png");
-  height: 400px;
-  width: 350px;
-  background-size: cover;
+h3{
+  text-align: center;
+  margin: 0 auto 20px;
 }
-.image3 {
-  background-image: url("timer.png");
-  height: 400px;
-  width: 350px;
-  background-size: cover;
-}
-.image4 {
-  background-image: url("history.png");
-  height: 400px;
-  width: 350px;
-  background-size: cover;
-}
-.image5 {
-  background-image: url("chart.png");
-  height: 400px;
-  width: 350px;
-  background-size: cover;
+h4{
+  text-align: center;
 }

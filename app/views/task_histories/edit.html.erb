@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'edit_new' %>
 
-<h1 class="task-history-h1">Edit History</h1>
+<h1>Edit History</h1>
 <div class="task-history-edit-form-wrapper">
 
   <div class="error">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="finish-box">
-      <%= f.label :finish_time, 'Finish Time', class: "finish-text" %>
+      <%= f.label :finish_time, 'End Time', class: "finish-text" %>
       <%= f.time_select :finish_time %>
     </div>
 

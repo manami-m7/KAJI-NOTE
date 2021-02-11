@@ -3,7 +3,7 @@ body{
 }
 
 // task/newページ
-.task-h1{
+h1{
   text-align: center;
   padding: 1em 0;
   color: #757171;
@@ -97,11 +97,6 @@ h2{
   text-align: center;
   padding: 1em 0;
 }
-.task-history-h1{
-  text-align: center;
-  padding: 1em 0;
-  color: #757171;
-}
 
 // task_history/editページ
 .task-history-edit-form-wrapper{
@@ -120,9 +115,7 @@ h2{
   font-size: 1.5rem;
   margin-right: 45px;
 }
-// .start-select{
 
-// }
 // ドロワーメニューの色変更
 .menu-drawer .btn {
   font-size: 27px;
