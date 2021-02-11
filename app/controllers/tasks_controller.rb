@@ -41,7 +41,7 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-   # 投稿データのストロングパラメータ
+
   private
 
   def task_params

@@ -14,94 +14,91 @@
   </head>
 
   <body class="body">
-     <!--ユーザーがsign_in時のヘッダー-->
-      <% if user_signed_in? %>
-        <header>
-          <% if !(current_user.task_histories.last.present? && current_user.task_histories.last.finish_time.nil?) %>
+    <!--ユーザーがsign_in時のドロワーメニューー-->
+    <% if user_signed_in? %>
+      <header>
+        <!--打刻中のページ遷移を防ぐためのif-->
+        <% if !(current_user.task_histories.last.present? && current_user.task_histories.last.finish_time.nil?) %>
           <div class="menu-drawer">
             <input type="checkbox" id="chk" />
             <label class="btn" for="chk"></label>
             <label class="other" for="chk"></label>
-            <div class="content">
-              <h2><%= current_user.name %></h2>
-
-
-                  <div class="menu">
-                    <%= link_to home_path do %><i class="fas fa-home"></i>home<% end %>
-                    <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
-                    <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end %>
-                    <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
-                    <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>about me<% end %>
-                    <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
-                    </div>
-
-
-                <p><i class="fas fa-chevron-down"></i></p>
-            </div>
-          </div>
-          <% end %>
-        </header>
-
-    <!--ユーザーがsign_out時のヘッダー-->
-    <% else %>
-        <header>
-          <div class="menu-drawer">
-            <input type="checkbox" id="chk" />
-            <label class="btn" for="chk"></label>
-            <label class="other" for="chk"></label>
-            <div class="content">
-              <h2><i class="fas fa-list-ul"></i>メニュー</h2>
+              <div class="content">
+                <h2><%= current_user.name %></h2>
                 <div class="menu">
-                  <%= link_to new_user_session_path do %><i class="fas fa-sign-in-alt"></i></i>sign in<% end %>
-                  <%= link_to new_user_registration_path do %><i class="fas fa-user-plus"></i>sign up<% end %>
-                  <p></p>
+                  <%= link_to home_path do %><i class="fas fa-home"></i>home<% end %>
+                  <%= link_to charts_path do %><i class="fas fa-chart-pie"></i>glaph<% end %>
+                  <%= link_to tasks_path do %><i class="fas fa-clipboard-list"></i>task<% end %>
+                  <%= link_to task_histories_path do %><i class="fas fa-history"></i>history<% end %>
+                  <%= link_to edit_user_path(current_user) do %><i class="fas fa-user-cog"></i>about me<% end %>
+                  <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i>sign out<% end %>
+                  <div class"copy-text">COPYRIGHT &#169; kaji-note ALL RIGHTS RESERVED.</div>
                 </div>
-            </div>
+              </div>
           </div>
-        </header>
+        <% end %>
+      </header>
+    <!--ユーザーがsign_out時のヘッダードロワーメニュー-->
+    <% else %>
+      <header>
+        <div class="menu-drawer">
+          <input type="checkbox" id="chk" />
+          <label class="btn" for="chk"></label>
+          <label class="other" for="chk"></label>
+          <div class="content">
+            <h2><i class="fas fa-list-ul"></i>menu</h2>
+              <div class="menu">
+                <%= link_to new_user_session_path do %><i class="fas fa-sign-in-alt"></i></i>sign in<% end %>
+                <%= link_to new_user_registration_path do %><i class="fas fa-user-plus"></i>sign up<% end %>
+                <div class="copy-text">COPYRIGHT &#169; kaji-note ALL RIGHTS RESERVED.</div>
+              </div>
+          </div>
+        </div>
+      </header>
     <% end %>
 
-      <main>
-        <%= yield %>
-      </main>
+    <main>
+      <%= yield %>
+    </main>
 
     <!--ユーザーがsign_in時のフッター-->
     <% if user_signed_in? %>
+      <!--打刻中のページ遷移を防ぐためのif-->
       <% if current_user.task_histories.last.present? && current_user.task_histories.last.finish_time.nil? %>
         <footer>
-        <div class="footer-content">
-          <div class="footer-icon">
-            <i class="fas fa-clipboard-list fa-3x faa-spin animated-hover"></i>
+          <div class="footer-content">
+            <div class="footer-icon">
+              <i class="fas fa-clipboard-list fa-3x faa-spin animated-hover"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fas fa-home fa-3x faa-shake animated-hover"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fas fa-history fa-3x faa-bounce animated-hover"></i>
+            </div>
+            <div class="footer-icon">
+              <i class="fas fa-chart-pie fa-3x faa-tada animated-hover"></i>
+            </div>
           </div>
-          <div class="footer-icon">
-            <i class="fas fa-home fa-3x faa-shake animated-hover"></i>
-          </div>
-          <div class="footer-icon">
-            <i class="fas fa-history fa-3x faa-bounce animated-hover"></i>
-          </div>
-          <div class="footer-icon">
-            <i class="fas fa-chart-pie fa-3x faa-tada animated-hover"></i>
-          </div>
-        </div>
-       </footer>
+        </footer>
       <% else %>
-      <footer>
-        <div class="footer-content">
-          <div class="footer-icon">
-            <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x faa-spin animated-hover"></i><% end %>
+        <footer>
+          <div class="footer-content">
+            <div class="footer-icon">
+              <%= link_to tasks_path do %><i class="fas fa-clipboard-list fa-3x faa-spin animated-hover"></i><% end %>
+            </div>
+            <div class="footer-icon">
+              <%= link_to home_path do %><i class="fas fa-home fa-3x faa-shake animated-hover"></i><% end %>
+            </div>
+            <div class="footer-icon">
+              <%= link_to task_histories_path do %><i class="fas fa-history fa-3x faa-bounce animated-hover"></i><% end %>
+            </div>
+            <div class="footer-icon">
+              <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x faa-tada animated-hover"></i><% end %>
+            </div>
           </div>
-          <div class="footer-icon">
-            <%= link_to home_path do %><i class="fas fa-home fa-3x faa-shake animated-hover"></i><% end %>
-          </div>
-          <div class="footer-icon">
-            <%= link_to task_histories_path do %><i class="fas fa-history fa-3x faa-bounce animated-hover"></i><% end %>
-          </div>
-          <div class="footer-icon">
-            <%= link_to charts_path do %><i class="fas fa-chart-pie fa-3x faa-tada animated-hover"></i><% end %>
-          </div>
-        </div>
-       </footer>
-       <% end %>
+        </footer>
+      <% end %>
     <% end %>
   </body>
 </html>
