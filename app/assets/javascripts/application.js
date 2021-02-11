@@ -27,3 +27,10 @@
 // deleteフォームをアレンジのために追記
 //= require data-confirm-modal
 
+$(document).on('ready', function() {
+  $(".regular").slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+  });
+});
