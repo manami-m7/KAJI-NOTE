@@ -1,44 +1,81 @@
 
-<%= stylesheet_link_tag 'homes' %>
-
+<%= stylesheet_link_tag 'homes_top' %>
 
 <h1>kaji-note</h1>
 
-<div class="container">
-<div id="box">
-  <div id="images" class="skippr">
-    <div class="image1"></div>
-    <div class="image2"></div>
-    <div class="image3"></div>
-    <div class="image4"></div>
-    <div class="image5"></div>
-  </div>
-</div>
-</div>
-
-<div class="top-container">
   <div class="top-box">
-    <h2>kaji-noteとは</h2>
-      <h3>家事・育児に忙しい毎日を送る夫婦をサポートするアプリです。</h3>
-        <h4>一緒に暮らしていて、意識・認識にズレがあると、<br>
-            せっかくの結婚生活が喧嘩ばかりという事にもなりかねません。<br>
-            kaji-noteは生活から切っても切り離せない『家事』をわかりやすく可視化し<br>
-            二人が家事・育児という大変なことに対して共に向き合えることを意識しています。
-        </h4>
-    <div class="top-image"></div>
-    <div class="top-text"></div>
+    <h2>kaji-noteとは?</h2>
+    <h3>家事・育児に忙しい毎日を送る夫婦を<br>サポートするアプリです</h3>
+    <h4>一緒に暮らしていて、意識・認識にズレがあると、<br>
+        せっかくの結婚生活が喧嘩ばかりという事にもなりかねません。<br>
+        kaji-noteは生活から切っても切り離せない『家事』をわかりやすく可視化し<br>
+        二人が家事・育児という大変なことに対して共に向き合えることを意識しています。
+    </h4>
+    <h5><span class="under">kaji-note４つのポイント</span></h5>
+      <div class="point-box">
+        <ul>
+          <li><span class="unders">シンプルなデザインと使いやすい操作性</span></li>
+          <li><span class="unders">オリジナルの家事が登録できる</span></li>
+          <li><span class="unders">家事の履歴が分かる</span></li>
+          <li><span class="unders">家事にかかる時間をデータとして可視化</span></li>
+        </ul>
+      </div>
+    <h6><span class="under">kaji-noteの使い方</span></h6>
   </div>
+
+  <div class="top-container">
+    <div class="box">
+      <div class="text">
+        <h7>二人のためのオリジナル家事を登録</h7>
+        <p>デフォルトの家事リストはご用意していません。<br>
+           二人にとって必要な家事、二人だけの家事リストを作成できます。
+        </p>
+      </div>
+      <div class="pict"><%= image_tag 'home.png' %></div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h7>タイマー機能で家事の時間を記録</h7>
+        <p>家事を始める時は時間の計測を。<br>
+           </p>
+      </div>
+      <div class="pict"><%= image_tag 'timer.png' %></div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h7>毎日の家事を履歴でチェック</h7>
+        <p>ページの上部に今日の達成家事を個数と時間にわけて表示。<br>
+           今日の履歴を見ながら、二人の分担状況もチェックしましょう。<br>
+           また、スクロールすれば今までの履歴も確認できます。</p>
+      </div>
+      <div class="pict"><%= image_tag 'history.png' %></div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h7>家事ごとのトータル時間と平均時間を可視化</h7>
+        <p>記録した家事をタスクごとにグラフ表示できます。<br>
+           円グラフは家事ごとのトータル時間を、<br>
+           棒グラフは平均時間を表しています。</p>
+      </div>
+      <div class="pict"><%= image_tag 'chart.png' %></div>
+    </div>
+
+    <div class="top-box">
+      <h6><span class="under">使ってみましょう！</span></h8>
+    </div>
+
+    <div class="home-top-box">
+      <div class="home-top-button">
+        <a href="/users/sign_up" class="a-button">Create an account</a>
+      </div>
+      <div class="home-top-button">
+        <a href="/users/sign_in" class="a-button">log in</a>
+      </div>
+    </div>
 </div>
 
-<div class="home-top-wrapper">
-  <div class="home-top-box">
-    <a href="/users/sign_up" class="btn-square">Create an account</a>
-  </div>
 
-  <div class="home-top-box">
-    <a href="/users/sign_in" class="btn-square">log in</a>
-  </div>
-</div>
+
 
 
 
