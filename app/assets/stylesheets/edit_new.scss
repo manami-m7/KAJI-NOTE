@@ -107,13 +107,22 @@ h2{
   border-style: solid;
   border-color: #C7F2E1;
 }
+.start-box{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.6em;
+}
+.finish-box{
+  display: flex;
+  justify-content: space-between;
+}
 .start-text{
   font-size: 1.5rem;
-  margin-right: 50px;
+  margin-right: 2em;
 }
 .finish-text{
   font-size: 1.5rem;
-  margin-right: 45px;
+  margin-right: 2.6em;
 }
 
 // ドロワーメニューの色変更

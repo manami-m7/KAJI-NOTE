@@ -20,4 +20,5 @@ Rails.application.config.assets.precompile += %w(
   task_histories.css
   charts.css
   edit_new.css
+  homes_top.css
 )
